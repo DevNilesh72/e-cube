@@ -1,0 +1,143 @@
+.header{
+  background-color: blue;
+}
+
+.border4 {
+  background: blue;
+  height: 4px;
+  margin-top:10px;
+}
+.border3 {
+  background: blue;
+  height: 4px;
+  margin-top:10px;
+}
+.sec-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.sec-nav a {
+  text-decoration: none;
+  color: blue;
+  padding: 15px;
+}
+.sec-nav a:hover {
+  background-color: blue;
+  color: white;
+}
+.sec-nav li {
+  display: inline;
+  font-size: 120%;
+}
+
+.nav-admin {
+  overflow: auto;
+  height: 110px;
+}
+
+.nav-items {
+  float: left;
+  color: blue;
+  height: 90px;
+  padding: 10px;
+  margin: 10px 60px 0px 35px;
+  text-align: center;
+}
+
+.nav-items:hover {
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+}
+
+.icon-cog {
+  color: blue;
+}
+
+.nav-admin span {
+  color: black;
+  font-size: large;
+  align-content: center;
+}
+
+.hide-link{
+  text-decoration: none;
+  color: blue;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  margin: auto;
+}
+
+.login-container{
+  width: 80%;
+  margin: auto;
+}
+
+.login-header{
+  width: 60%;
+  margin: auto;
+  color: blue;
+  cursor: pointer;
+}
+
+.login-header > .col:hover{
+  color: gray;
+}
+
+.art-link{
+  text-decoration: none;
+  color: black;
+}
+
+.seat-list{
+  width: 1300px;
+  height: 1700px;
+}
+
+.seat-col{
+  width: 100%;
+  height: 50px;
+}
+
+.seat-row{
+  width: 50px;
+  position: absolute;
+}
+
+.seat-col-lbl{
+  float: left;
+  margin: 17px;
+}
+
+.seat-row-lbl{
+  margin: 25px;
+  height: 27px;
+}
+
+.seat-box-lbl{
+  float: left;
+  margin: 14px;
+}
+
+.seat-body{
+  width: 100%;
+  height: 1350px;
+}
+
+.seat-box{
+  margin-left: 60px;
+  float: left;
+}
+
+.seat-box:hover{
+  background-color: rgb(38, 42, 255);
+}
+
+.seat-box-empty{
+  height: 55px;
+}
+
