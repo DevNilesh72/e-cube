@@ -23,7 +23,7 @@ const RegisterDisplay = () => {
 
     return (
         <>
-            <div className="row login-container">
+            <div className="row model-container">
                 <form onSubmit={RegisterSubmit}>
                     <div className="form-group row">
                         <label for="inputName" className="col-3 col-form-label">

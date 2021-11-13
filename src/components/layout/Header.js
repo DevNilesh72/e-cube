@@ -11,6 +11,10 @@ class Header extends React.Component {
             modalShow : false,
             headerSec : []
         }
+        this.admin = "/";
+        if(this.props.admin == "true"){
+            this.admin = "/admin/movie/";
+        }
     }
 
     componentDidMount() {
@@ -62,7 +66,7 @@ class Header extends React.Component {
                             </span>
                         ) : (
                             <span className="navbar-text">
-                                <span className="text-light">Hello! {this.props.user}| </span>
+                                <span className="text-light">Hello! {(this.props.user.name != "" ? this.props.user.name : "")} | </span>
                                 <span
                                     className="text-light"
                                     style={{ cursor: "pointer" }}
@@ -80,12 +84,17 @@ class Header extends React.Component {
                             this.state.headerSec.map((section) => {
                                 return(
                                     <li>
-                                        <a href={section.src}>{section.name}</a>
+                                        <a href={this.admin+section.src}>{section.name}</a>
                                     </li>
                                 );
                             })
                         }
                     </ul>
+                    {/* <ul className="sec-nav-right">
+                        <li>
+                            <a>My order</a>
+                        </li>
+                    </ul> */}
                 </div>
                 <div className="border4"></div>
                 <Login show={this.state.modalShow} onHide={() => this.setModalShow(false)} />
@@ -97,13 +106,18 @@ class Header extends React.Component {
 //component state map to props
 const mapStateToProps = state => {
     return {
-        token: state.token
+        token: state.token,
+        user: state.user
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        logoutUser: () => dispatch({ type: LOGOUT, value: "" })
+        logoutUser: () => {
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+            dispatch({ type: LOGOUT, value: "" });
+        }
     };
 };
 

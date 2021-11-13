@@ -1,10 +1,10 @@
 import './App.css';
-import Header from './components/layout/Header';
 import Landing from './components/layout/Landing';
 import Footer from './components/layout/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Routers from './components/routes/Routers';
 import React from 'react';
+import AdminRoutes from './components/routes/AdminRoutes';
 
 class App extends React.Component {
   constructor(){
@@ -15,9 +15,8 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          <Header></Header>
           <Switch>
-            <Route exact path="/" component={Landing}></Route>
+            <Route path="/admin" component={AdminRoutes}></Route>
             <Route component={Routers}></Route>
           </Switch>
           <Footer></Footer>

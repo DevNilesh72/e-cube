@@ -72,7 +72,7 @@ class ManageCategory extends React.Component{
                                             <td>{section.name}</td>
                                             <td>{section.src}</td>
                                             <td>
-                                                <Link to={"addCategory/"+section._id}>
+                                                <Link to={"/admin/addCategory/"+section._id}>
                                                     <button type="button" className="btn btn-info">Update</button>
                                                 </Link>
                                                 <button type="button" className="btn btn-danger" onClick={() => this.deleteCategory(section._id)}>Delete</button>

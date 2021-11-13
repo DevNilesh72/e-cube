@@ -31,9 +31,73 @@
   font-size: 120%;
 }
 
+.sec-nav-right {
+  list-style-type: none;
+  margin-right: 0;
+  padding: 0;
+}
+.sec-nav-right a {
+  text-decoration: none;
+  color: blue;
+  padding: 15px;
+}
+.sec-nav-right a:hover {
+  background-color: blue;
+  color: white;
+}
+.sec-nav-right li {
+  display: inline;
+  font-size: 120%;
+}
+
 .nav-admin {
   overflow: auto;
   height: 110px;
+}
+
+.book-details {
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: auto;
+  height: 130px;
+  width: 1300px;
+}
+
+.admn-poster{
+  max-height: 500px;
+}
+
+.admn-thumbnail{
+  max-height: 200px;
+}
+
+.admn-icon{
+  max-height: 50px;
+  max-width: 80px;
+}
+
+.book-icon{
+  max-height: 105px;
+  max-width: 800px;
+  margin-left: 70px;
+  border-radius: 5px;
+}
+
+.book-details-items{
+  float: left;
+  margin-right: 100px;
+  margin-top: 10px;
+}
+
+.time_slot{
+  float: left;
+  margin-right: 80px;
+}
+
+.book-btn{
+  height: 105px;
+  width: 250px;
+  font-size: 15px;
 }
 
 .nav-items {
@@ -72,14 +136,14 @@
   margin: auto;
 }
 
-.login-container{
+.model-container{
   width: 80%;
   margin: auto;
 }
 
-.login-header{
-  width: 60%;
-  margin: auto;
+.model-header{
+  width: 100%;
+  margin-left: 15px;
   color: blue;
   cursor: pointer;
 }

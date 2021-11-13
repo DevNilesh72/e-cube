@@ -10,11 +10,23 @@ class displayService {
     }
 
     getMovie(){
-        return htaccess().get('/movie/all');
+        return htaccess().get('/movies/all');
     }
 
     getMovieByCategory(catid){
-        return htaccess().get('/movie/cat/'+catid);
+        return htaccess().get('/movies/cat/'+catid);
+    }
+
+    getMovieScreen(Mid){
+        return htaccess().get('/movies/screen/'+Mid);
+    }
+
+    getOneMovie(movieId){
+        return htaccess().get('/movies/one/'+movieId);
+    }
+
+    getMovieBooking(movieID,screenID){
+        return htaccess().get('/movies/book/one/'+movieID+'/'+screenID);
     }
 }
 

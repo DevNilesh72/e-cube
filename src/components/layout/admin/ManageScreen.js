@@ -68,7 +68,7 @@ function ManageScreen(){
                                         <td>{section.capacity}</td>
                                         <td>{section.active.toString()}</td>
                                         <td>
-                                            <Link to={"addScreen/"+section._id}>
+                                            <Link to={"/admin/addScreen/"+section._id}>
                                                 <button type="button" className="btn btn-info">Update</button>
                                             </Link>
                                             <button type="button" className="btn btn-danger" onClick={() => deleteScreen(section._id)}>Delete</button>

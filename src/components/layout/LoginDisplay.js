@@ -15,8 +15,15 @@ const LoginDisplay = (props) => {
         })
         .then(res => {
             var token = res.data.token;
-            props.loginUser(token);
-
+            
+            localStorage.setItem("token",token);
+            loginService.current(token)
+                .then(res1 => {
+                    var user = res1.data;
+                    localStorage.setItem("user",JSON.stringify(user));
+                    props.loginUser(token,user);
+                })
+                .catch(err => alert(err))
             alert("Login succesfull");
             props.hide_cb();
         })
@@ -27,7 +34,7 @@ const LoginDisplay = (props) => {
 
     return (
         <>
-            <div className="row login-container">
+            <div className="row model-container">
                 <form onSubmit={LoginSubmit}>
                     <div className="form-group row">
                         <label for="inputEmail" className="col-3 col-form-label">
@@ -79,13 +86,14 @@ const LoginDisplay = (props) => {
 //component state map to props
 const mapStateToProps = state => {
     return {
-        token: state.token
+        token: state.token,
+        user: state.user
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        loginUser: (token) => dispatch({ type: LOGIN, value: token })
+        loginUser: (Ntoken,Nuser) => dispatch({ type: LOGIN, value: {token:Ntoken,user:Nuser} })
     };
 };
 

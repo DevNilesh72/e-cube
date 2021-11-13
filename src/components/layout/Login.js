@@ -15,21 +15,23 @@ function Login(props) {
         centered
       >
         <Modal.Header>
-          <div className="row login-header">
-            <div className="col" onClick={() => showLogin(true)}>
+          <div className="row model-header">
+            <div className="col-5" onClick={() => showLogin(true)}>
               Login
             </div>
-            <div className="col" onClick={() => showLogin(false)}>
+            <div className="col-5" onClick={() => showLogin(false)}>
               Sign up
+            </div>
+            <div className="col-1">
+              <button className="btn btn-primary" onClick={props.onHide}>
+                <i className="fas fa-times"></i>
+              </button>
             </div>
           </div>
         </Modal.Header>
         <Modal.Body>
           {Login ? <LoginDisplay hide_cb={props.onHide} /> : <RegisterDisplay />}
         </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
       </Modal>
     </>
   );

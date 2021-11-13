@@ -10,7 +10,7 @@ class adminService {
     }
 
     addMovie(MovieObj){
-        return htaccess().post('/movie/add',MovieObj);
+        return htaccess().post('/movies/add',MovieObj);
     }
 
     updateCategory(CatId,CatObj){
@@ -22,7 +22,7 @@ class adminService {
     }
 
     updateMovie(movieId,movieObj){
-        return htaccess().post('/movie/update/' + movieId,movieObj);
+        return htaccess().post('/movies/update/' + movieId,movieObj);
     }
 
     deleteCategory(CatId){
@@ -34,7 +34,7 @@ class adminService {
     }
 
     deleteMovie(movieId){
-        return htaccess().delete('/movie/delete/' + movieId);
+        return htaccess().delete('/movies/delete/' + movieId);
     }
 
     editCategory(CatId){
@@ -46,7 +46,15 @@ class adminService {
     }
 
     editMovie(movieId){
-        return htaccess().get('/movie/edit/' + movieId);
+        return htaccess().get('/movies/edit/' + movieId);
+    }
+
+    updateMoviePrice(movieId,price_details){
+        return htaccess().post('/movies/update/price/'+movieId,price_details);
+    }
+
+    addMoviePrice(movieId,price_details){
+        return htaccess().post('/movies/add/price/'+movieId,price_details);
     }
 }
 
